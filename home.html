@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+li
+{
+  float: left;
+}
+ul {
+  padding:10px;
+  margin:10px;
+  list-style-type:none;
+  overflow:hidden;
+  background-color:#008080;
+   border: 1px solid teal ;
+    border-radius: 10px;
+}
+li a{
+  display:block;
+  color:white;
+  text-align:center;
+  padding:28px 32px;
+  text-decoration:none;
+}
+li a:hover {
+    background-color: #66cdaa;
+}
+
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+    display: none;
+border-radius:5px;
+}
+.quotes{
+text-align:center;
+font-family:fantasy;
+letter-spacing:3px;
+word-spacing:5px;
+font-size:25px;
+}
+.head{
+border:1px solid teal;
+border-radius:10px;
+font-size: 30px;
+margin: 10px;
+text-align:center;
+width:300px;
+background-color: teal;
+color:white;
+letter-spacing: 5px;
+word-spacing: 7px;
+border-width: thick;
+}
+.wish{
+  text-align: center;
+  font-family: Lato;
+   src: url(/assets/fonts/Lato-LightItalic.woff2) format('woff2'),
+        url(/assets/fonts/Lato-LightItalic.woff) format('woff');
+  font-weight: 200;
+  font-style: italic;
+  font-size: 50px;
+  letter-spacing: 5px;
+  word-spacing: 7px;
+}
+</style>
+</head>
+<body>
+<p
+ class="head">
+YUVRAJ DALIA</p>
+<nav class="nav navbar-default">
+  <div class="container fluid">
+  <ul class="nav navbar-nav">
+  <li class="active"><a href="home.html">Home</a></li>
+  <li><a href="Aboutme.html">About Me</a></li>
+  <li><a href="interests.html">Interests</a></li>
+  <li><a href="projects.html">Projects</a></li>
+  <li><a href="contact.html">Contact</a></li>
+  </ul>
+  </div>
+</nav>
+<p id="demo" class="wish"></p>
+
+<script>
+window.onload = function myFunction() {
+    var greeting;
+    var time = new Date().getHours();
+    if (time < 12) {
+        greeting = "Hello! Good morning";
+    } else if (time < 15) {
+        greeting = "Hello! Good afternoon";
+    } else {
+        greeting = "Hello! Good evening";
+    }
+document.getElementById("demo").innerHTML = greeting;
+}
+
+</script>
+<div class="slideshow-container">
+  <!-- Full-width images with number and caption text -->
+  <div class="mySlides">
+    <img src="Quote-wallpaper-13.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <img src="best-encouraging-quotes-hd-photos-President-Obama-has-created-the-image.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <img src="Education-Quote-Wallpaper-HD-5.jpg" style="width:100%">
+  </div>
+  </div>
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}
+    slides[slideIndex-1].style.display = "block";
+    setTimeout(showSlides, 5000);
+}
+</script>
+<p class="quotes">
+Some of my favourite quotes</p>
+</body>
+<html>
